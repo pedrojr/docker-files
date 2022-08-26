@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: mssql-2019-latest
+    ports:
+      - 1433:1433
+    volumes:
+      - mssql:/var/opt/mssql
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=qwe@1234
+      - MSSQL_PID=Express
+
+volumes:
+  mssql:
