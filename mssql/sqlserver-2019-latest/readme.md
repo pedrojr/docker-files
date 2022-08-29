@@ -14,3 +14,8 @@ CREATE DATABASE db ON
   (FILENAME = '/var/opt/mssql/db_Log.ldf')
 FOR ATTACH;
 ```
+
+Sobe container(s)
+```
+docker-compose up -d
+```

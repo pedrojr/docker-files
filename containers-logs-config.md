@@ -1,5 +1,5 @@
 
-Create or edit file daemon.json
+Create or edit daemon.json file
 
 Linux: 
 ```
