@@ -1,0 +1,12 @@
+version: '3'
+
+volumes:
+  plantuml_data:
+
+services:
+  plantuml:
+    image: plantuml/plantuml-server:jetty
+    ports:
+      - 9091:8080
+    volumes:
+      - plantuml_data:/tmp/jetty
