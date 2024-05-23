@@ -1,0 +1,21 @@
+version: '3'
+
+volumes:
+  openldap_data:
+
+services:
+  openldap:
+    image: bitnami/openldap:latest
+    container_name: openldap
+    ports:
+      - "1389:1389"
+      - "1636:1636"
+    environment:
+      - LDAP_ROOT=dc=example,dc=com
+      - LDAP_ADMIN_DN=cn=admin,dc=example,dc=com
+      - LDAP_ADMIN_USERNAME=admin
+      - LDAP_ADMIN_PASSWORD=qwe@1234
+      - LDAP_USERS=ad_user_1,ad_user_2,ad_user_3,ad_user_4
+      - LDAP_PASSWORDS=qwe@1001,qwe@1002,qwe@1003,qwe@1004
+    volumes:
+      - 'openldap_data:/bitnami/openldap'
